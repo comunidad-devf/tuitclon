@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tweet by {{tweet.user}}</title>
+</head>
+<body>
+	{% if tweet.tweet %}
+		{{tweet.tweet}}
+	{% else %}
+		<h2>Este tweet no dice algo!</h2>
+	{% endif %}
+
+</body>
+</html>

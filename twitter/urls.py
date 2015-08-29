@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-from tweets.views import new_tweet
+from tweets.views import new_tweet, show_tweet
 
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^tweet/$', new_tweet)
+    url(r'^tweet/$', new_tweet),
+    url(r'^tweet/(?P<id_tweet>\d{1,})/$', show_tweet)
 ]
